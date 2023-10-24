@@ -3,7 +3,7 @@ import axios from "axios";
 import Coins from "./components/Coin/Coins";
 import Header from "./components/Header/Header";
 import Coin from "./pages/Coin/coin";
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const App = () => {
   const [coins, setCoins] = useState([]);
@@ -25,6 +25,7 @@ const App = () => {
   return (
     <>
       <Header />
+
       <Routes>
         <Route path="/" element={<Coins coins={coins} />} />
         <Route path="/coin" element={<Coin />}>
